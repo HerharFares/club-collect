@@ -10,6 +10,10 @@ UNIV_LINK_FR = "https://www.mesrs.dz/fr/universites"
 ECOLE_LINK_AR = "https://www.mesrs.dz/ar/ecoles-nationales"
 ECOLE_LINK_FR = "https://www.mesrs.dz/fr/ecoles-nationales"
 
+# for teachers national schools
+TEACH_LINK_AR = "https://www.mesrs.dz/ar/ecoles-normales"
+TEACH_LINK_FR = "https://www.mesrs.dz/fr/ecoles-normales"
+
 REPLACE_ITEMS = [
     ("technologie", "technology"),
     ("Université", "University"),
