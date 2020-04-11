@@ -2,6 +2,7 @@
 # univ.csv, univ.json: contains data about the universities, in both csv & json format.
 # schools.csv, schools.json: contains data about the national algerian schools, in both csv & json format.
 # teach.csv, teach.json: contains data about the national algerian teachers schools, in both csv & json format.
+# center.csv, center.json: contains data about the national algerian university centers, in both csv & json format.
 <pre>
 The data is structered as fallows:<br>
     university:{
@@ -15,4 +16,4 @@ The data is structered as fallows:<br>
         "region_en":"The region of where ths university is located in English",<br>
     }
 <pre>
-this represents a single university or national schools, and in both files there is a collection of them.<br>
+this represents a single university or national schools, center, and in both files there is a collection of them.<br>
