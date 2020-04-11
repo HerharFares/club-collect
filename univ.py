@@ -118,11 +118,11 @@ if __name__ == "__main__":
         for univ_item in get_univ_data(key):
             data.append(univ_item)
 
-    # dumping the data into jdon file
-    dumpData(os.path.join(BASE_DIR, "data/univ.json"), {"universities": data})
+    # # dumping the data into jdon file
+    # dumpData(os.path.join(BASE_DIR, "data/univ.json"), {"universities": data})
 
-    # write data into csv file
-    tools.csv_writer(os.path.join(BASE_DIR, "data/univ.csv"),
-                     ["web_site", "name_ar", "name_fr", "name_en",
-                      "region_ar", "region_fr", "region_en"],
-                      [val.values() for val in data])
+    # # write data into csv file
+    # tools.csv_writer(os.path.join(BASE_DIR, "data/univ.csv"),
+    #                  ["web_site", "name_ar", "name_fr", "name_en",
+    #                   "region_ar", "region_fr", "region_en"],
+    #                   [val.values() for val in data])

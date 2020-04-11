@@ -2,13 +2,13 @@ from bs4 import BeautifulSoup
 import requests
 import os
 
-from config import UNIV_LINK_AR, UNIV_LINK_FR, BASE_DIR
+from config import ECOLE_LINK_AR, ECOLE_LINK_FR, BASE_DIR
 from managedata import dumpData
 import tools
 
 
-def get_univ_data(key):
-    """Fro scraping the list of algerian universities,
+def get_ecole_data(key):
+    """Fro scraping the list of algerian national schools,
     the key is to specify the regions, the code is not perfect,
     but it does the work.
 
@@ -44,7 +44,7 @@ def get_univ_data(key):
     '''Extracting the data for the arabic version'''
     # dowloading the page, and parsing the data
     # for the arabic version
-    html = requests.get(UNIV_LINK_AR)
+    html = requests.get(ECOLE_LINK_AR)
     html = BeautifulSoup(html.text, 'html.parser')
 
     # fetching the first div(the west one), and getting the links from it
@@ -64,11 +64,12 @@ def get_univ_data(key):
                            item.text.replace("\xa0", "")])
         except:
             pass
+    
 
     '''Extracting the data for the french version'''
     # dowloading the page, and parsing the data
     # for the french version
-    html = requests.get(UNIV_LINK_FR)
+    html = requests.get(ECOLE_LINK_FR)
     html = BeautifulSoup(html.text, 'html.parser')
 
     # fetching the first div(the west one), and getting the links from it
@@ -84,10 +85,6 @@ def get_univ_data(key):
                            item.text.replace("\xa0", "")])
         except:
             pass
-
-    # because of an error in the web site, i had to cerrect it
-    if key == "2":
-        out_fr.pop(-2)
 
     '''Converting university names from French to English'''
     # converting university name from franch to english
@@ -115,14 +112,15 @@ if __name__ == "__main__":
 
     # pasrse the key, to extract the data
     for key in ["2", "3", "4"]:
-        for univ_item in get_univ_data(key):
+        for univ_item in get_ecole_data(key):
             data.append(univ_item)
 
-    # dumping the data into jdon file
-    dumpData(os.path.join(BASE_DIR, "data/univ.json"), {"universities": data})
 
-    # write data into csv file
-    tools.csv_writer(os.path.join(BASE_DIR, "data/univ.csv"),
-                     ["web_site", "name_ar", "name_fr", "name_en",
-                      "region_ar", "region_fr", "region_en"],
-                      [val.values() for val in data])
+    # # dumping the data into jdon file
+    # dumpData(os.path.join(BASE_DIR, "data/scools.json"), {"schools": data})
+
+    # # write data into csv file
+    # tools.csv_writer(os.path.join(BASE_DIR, "data/scools.csv"),
+    #                  ["web_site", "name_ar", "name_fr", "name_en",
+    #                   "region_ar", "region_fr", "region_en"],
+    #                   [val.values() for val in data])
