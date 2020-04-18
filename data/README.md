@@ -1,19 +1,3 @@
-# This directory contains the collected data.
-# univ.csv, univ.json: contains data about the universities, in both csv & json format.
-# schools.csv, schools.json: contains data about the national algerian schools, in both csv & json format.
-# teach.csv, teach.json: contains data about the national algerian teachers schools, in both csv & json format.
-# center.csv, center.json: contains data about the national algerian university centers, in both csv & json format.
-<pre>
-The data is structered as fallows:<br>
-    university:{
-
-        "web_site":"The wen site of the university",<br>
-        "name_ar":"The name of the university in Arabic",<br>
-        "name_fr":"The name of the university in French",<br>
-        "name_en":"The name of the university in English",<br>
-        "region_ar":"The region of where ths university is located (east, center, west), in Arabic",<br>
-        "region_fr":"The region of where ths university is located in French",<br>
-        "region_en":"The region of where ths university is located in English",<br>
-    }
-<pre>
-this represents a single university or national schools, center, and in both files there is a collection of them.<br>
+# For now Please go to the universities folder
+# we're still working on Scraping and Collecting the data
+# so please do not worry, all the data is always in, just the structure of the folders only
