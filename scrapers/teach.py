@@ -65,6 +65,10 @@ def get_teach_ecole_data(key):
         except:
             pass
 
+    # as always the Algerian beb sites, there is a hiden mistery
+    # it is just a data entry mistake
+    out_ar.pop(1)
+
     '''Extracting the data for the french version'''
     # dowloading the page, and parsing the data
     # for the french version
@@ -116,10 +120,11 @@ if __name__ == "__main__":
     #         data.append(univ_item)
 
     # # dumping the data into jdon file
-    # dumpData(os.path.join(BASE_DIR, "data/teach.json"), {"schools": data})
+    # dumpData(os.path.join(BASE_DIR, "data/universities/teach.json"),
+    #          {"schools": data})
 
     # # write data into csv file
-    # tools.csv_writer(os.path.join(BASE_DIR, "data/teach.csv"),
+    # tools.csv_writer(os.path.join(BASE_DIR, "data/universities/teach.csv"),
     #                  ["web_site", "name_ar", "name_fr", "name_en",
     #                   "region_ar", "region_fr", "region_en"],
     #                  [val.values() for val in data])

@@ -118,10 +118,10 @@ if __name__ == "__main__":
 
 
     # # dumping the data into jdon file
-    # dumpData(os.path.join(BASE_DIR, "data/scools.json"), {"schools": data})
+    # dumpData(os.path.join(BASE_DIR, "data/universities/scools.json"), {"schools": data})
 
     # # write data into csv file
-    # tools.csv_writer(os.path.join(BASE_DIR, "data/scools.csv"),
+    # tools.csv_writer(os.path.join(BASE_DIR, "data/universities/scools.csv"),
     #                  ["web_site", "name_ar", "name_fr", "name_en",
     #                   "region_ar", "region_fr", "region_en"],
     #                   [val.values() for val in data])
