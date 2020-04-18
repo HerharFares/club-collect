@@ -108,12 +108,13 @@ def get_ecole_data(key):
 
 
 if __name__ == "__main__":
-    data = list()  # sotre the data
+    pass
+    # data = list()  # sotre the data
 
-    # pasrse the key, to extract the data
-    for key in ["2", "3", "4"]:
-        for univ_item in get_ecole_data(key):
-            data.append(univ_item)
+    # # pasrse the key, to extract the data
+    # for key in ["2", "3", "4"]:
+    #     for univ_item in get_ecole_data(key):
+    #         data.append(univ_item)
 
 
     # # dumping the data into jdon file
