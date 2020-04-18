@@ -15,8 +15,7 @@ def csv_writer(file_name, row, data):
     by speciying the rows head titles, and the data to put.
     """
     csvfile = open(file_name,"w")  # the csv file
-    csvwriter = csv.writer(csvfile, delimiter=',', quotechar='|',
-                           quoting=csv.QUOTE_MINIMAL)
+    csvwriter = csv.writer(csvfile, delimiter=',', quoting=csv.QUOTE_MINIMAL)
 
     # writing desciption row
     csvwriter.writerow(row)
