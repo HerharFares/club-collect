@@ -69,7 +69,7 @@ def categorie3(list):
 links = []
 univ_names = []
 data = []
-myUniversities = loadData("data/univ.json")
+myUniversities = loadData("data/universities/univ.json")
 for x in myUniversities["universities"]:
 	links.append(x["web_site"])
 	univ_names.append(x["name_fr"])
