@@ -85,7 +85,7 @@ cat1 = [44]
 cat2 = [19]
 cat3 = [7]
 
-#categorie1(cat1)
-#categorie2(cat2)
-#categorie3(cat3)
+# categorie1(cat1)
+# categorie2(cat2)
+# categorie3(cat3)
 print(data)
